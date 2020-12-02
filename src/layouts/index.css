@@ -48,6 +48,7 @@ em{
   color: var(--highlight);
   background-color: var(--highlight-bg);
   font-style: normal;
+  padding: 0 0.3rem 0.2rem;
 }
 .highlight-blue{
   color: var(--blue-highlight);
@@ -61,7 +62,7 @@ em{
 
   width: 100vw;
   height: 100vh;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 
   text-align: center;
 
@@ -70,7 +71,7 @@ em{
 
 #slide ul {
     text-align: right;
-    padding-right: 4rem;
+    padding-right: 5.5rem;
 }
 #slide ul li::before{
   content: '-';
@@ -139,7 +140,11 @@ code {
   font-family: var(--font-mono);
   font-weight: 400;
   letter-spacing: -0.2rem;
-  padding-right: 0.4rem;
+  padding: 0.1rem 0.5rem 0.2rem 0.3rem;
+  color: rgb(197,200,198);
+  background: #1C2022;
+  border-radius: 5px;
+  font-size: 90%;
 }
 
 a:hover {
