@@ -1,15 +1,21 @@
-:root {
-  --bg: #fdfdfd;
-  --meta: #888;
-  --accent: #3178cd;
-  --text: black;
-  --base: 1.5rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
 
-@media (max-width: 600px) {
-  :root {
-    --base: 1.2rem;
-  }
+
+:root {
+  --font: 'Rubik', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --bg: #000;
+  --meta: #888;
+  --accent: #FB0269;
+  --highlight: #FB0269;
+  --highlight-bg:#20000F;
+  --text: #fafafa;
+
+  --blue-highlight: #35A0FF;
+  --blue-highlight-bg: #061521;
+
+  --para-size: 2.4rem;
 }
 
 * {
@@ -18,9 +24,7 @@
 
 body,
 html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  font-size: var(--base);
+  font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   font-feature-settings: 'calt', 'liga', 'hist', 'onum', 'pnum';
 
@@ -34,7 +38,21 @@ html {
   color: var(--text);
   background-color: var(--bg);
 }
-
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+}
+em{
+  color: var(--highlight);
+  background-color: var(--highlight-bg);
+  font-style: normal;
+}
+.highlight-blue{
+  color: var(--blue-highlight);
+  background-color: var(--blue-highlight-bg);
+}
 #slide {
   display: flex;
   overflow: hidden;
@@ -51,8 +69,20 @@ html {
 }
 
 #slide ul {
-    text-align: left;
-    margin-left: 32px;
+    text-align: right;
+    padding-right: 4rem;
+}
+#slide ul li::before{
+  content: '-';
+  background-color: var(--bg);
+  padding-right: 1rem;
+}
+#slide ul li{
+  list-style: none;
+  display: inline;
+  font-size: var(--para-size);
+  color: var(--blue-highlight);
+  background-color: var(--blue-highlight-bg);
 }
 
 a {
@@ -62,12 +92,11 @@ a {
 }
 
 blockquote {
-  font-size: 120%;
-  font-weight: bold;
-
-  width: 50vw;
-
+  font-size: var(--para-size);
+  width: 64vw;
   text-align: left;
+  padding-top: 2rem;
+  margin-left: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -99,21 +128,18 @@ cite::before {
 }
 
 pre {
-  font-size: 70%;
-
+  font-size: 2.2rem;
   display: inline-block;
-  overflow-x: scroll;
-
   margin: 2rem 0;
-
   text-align: left;
-
-  color: var(--accent);
+  color: var(--blue-highlight);
 }
 
 code {
-  font-family: menlo, monospace;
-  font-size: 90%;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: -0.2rem;
+  padding-right: 0.4rem;
 }
 
 a:hover {
@@ -121,20 +147,28 @@ a:hover {
 }
 
 h1 {
-  font-size: 200%;
-
-  margin-bottom: 0.5rem;
+  font-size: 5.4rem;
+  font-family: var(--font);
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 h2 {
-  font-size: 120%;
-
-  margin-bottom: 0.5rem;
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+h3{
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  color: var(--text);
+  font-size: var(--para-size);
+  line-height: 1.5;
+  padding: 1.5rem 4rem 0;
+  margin-bottom: 1.5rem;
+  margin-top: 0rem;
 }
 
 header {
@@ -168,3 +202,7 @@ header a:hover {
 header span {
   color: var(--text);
 }
+.font-small{
+  font-size: 2.2rem;
+}
+

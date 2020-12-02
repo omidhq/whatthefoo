@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link, navigate, StaticQuery, graphql } from 'gatsby';
+import { navigate, StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Swipeable from 'react-swipeable';
 import Transition from '../components/transition';
 
 import './index.css';
 
-const Header = ({ name, title, date }) => (
-  <header>
-    <Link to="/1">
-      <span>{name}</span> — {title}
-    </Link>
-    <time>{date}</time>
-  </header>
-);
 
 class TemplateWrapper extends Component {
   NEXT = [13, 32, 39];
@@ -60,11 +52,6 @@ class TemplateWrapper extends Component {
       <div>
         <Helmet
           title={`${site.siteMetadata.title} — ${site.siteMetadata.name}`}
-        />
-        <Header
-          name={site.siteMetadata.name}
-          title={site.siteMetadata.title}
-          date={site.siteMetadata.date}
         />
         <Swipeable
           onSwipedLeft={this.swipeLeft}

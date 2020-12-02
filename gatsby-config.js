@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    name: `Fabian Schultz`,
-    title: `Gatsby Deck`,
-    date: `July 30, 2018`,
+    name: `Hyper Island`,
+    title: `Frontend Developers '22`,
+    date: `04 December, 2020`,
   },
   plugins: [
     `gatsby-plugin-layout`,
